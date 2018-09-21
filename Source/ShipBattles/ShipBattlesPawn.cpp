@@ -57,9 +57,9 @@ void AShipBattlesPawn::Tick(float DeltaSeconds)
 
 	// Calculate change in rotation this frame
 	FRotator DeltaRotation(0,0,0);
-	DeltaRotation.Pitch = CurrentPitchSpeed * DeltaSeconds;
+	DeltaRotation.Pitch = CurrentPitchSpeed * DeltaSeconds * 20.0f;
 	DeltaRotation.Yaw = CurrentYawSpeed * DeltaSeconds;
-	DeltaRotation.Roll = CurrentRollSpeed * DeltaSeconds * 5.0f;
+	DeltaRotation.Roll = CurrentRollSpeed * DeltaSeconds;
 
 	// Rotate plane
 	AddActorLocalRotation(DeltaRotation);
